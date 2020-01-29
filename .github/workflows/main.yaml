@@ -1,4 +1,5 @@
 on: [push]
+name: Demo Workflow
 
 jobs:
     hello_world_job:
