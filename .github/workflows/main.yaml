@@ -13,3 +13,12 @@ jobs:
                   who-to-greet: 'Mona the Octocat'
             - name: Get the output time
               run: echo "The time was ${{ steps.hello.outputs.time }}"
+    env-test:
+        name: A job to test the env
+        runs-on: [ubuntu-latest]
+        env:
+            TEST: ${{github.ACTOR}}
+        steps:
+            - name: Single step
+              id: the-step
+              run: echo $TEST
